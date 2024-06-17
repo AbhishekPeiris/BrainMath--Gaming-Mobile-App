@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".PlayActivity">
+
+    <ProgressBar
+        android:id="@+id/horizontalProgressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="350dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/gray"
+        android:indeterminate="false"
+        android:max="10"
+        android:progress="0"
+        android:progressTint="@color/blue"
+        app:layout_constraintBottom_toTopOf="@+id/tvQuestion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="(3 + 4) x 6"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horizontalProgressBar" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvQuestion">
+
+        <ProgressBar
+            android:id="@+id/circularProgressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/black_pb_bg"
+            android:indeterminate="false"
+            android:max="10"
+            android:progress="10"
+            android:progressDrawable="@drawable/blue_pb_bg"
+            android:rotation="-90" />
+
+        <TextView
+            android:id="@+id/tvCountDown"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="10"
+            android:textColor="@color/blue"
+            android:textSize="80sp"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="412dp"
+        android:layout_height="321dp"
+        android:layout_marginTop="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+        <Button
+            android:id="@+id/btnption1"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="19dp"
+            android:layout_marginBottom="10dp"
+            android:text="29"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/btnption3"
+            app:layout_constraintEnd_toStartOf="@+id/btnption2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnption2"
+            android:layout_width="149dp"
+            android:layout_height="59dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="36dp"
+            android:layout_marginBottom="10dp"
+            android:text="29"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/btnption4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnption1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnption3"
+            android:layout_width="146dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="21dp"
+            android:layout_marginBottom="163dp"
+            android:text="29"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnption4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnption1" />
+
+        <Button
+            android:id="@+id/btnption4"
+            android:layout_width="145dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="36dp"
+            android:layout_marginBottom="165dp"
+            android:text="29"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnption3"
+            app:layout_constraintTop_toBottomOf="@+id/btnption2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
